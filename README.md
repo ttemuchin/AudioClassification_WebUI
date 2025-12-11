@@ -1,5 +1,15 @@
-# React + TypeScript + Vite
+# AudioClassification - UI
+MVP может быть использован как неплохая заготовка для полноценной платформы с применением в области умного дома, мониторинга пожилых людей, домашних животных и другое.
 
-Склонировав репозиторий, вам понадобятся команды:
+React + TypeScript + Vite
+
+Commands:
+(frontend)
 yarn install
 yarn run dev
+(gateway-service)
+gateway-service\cmd\server> go run main.go
+(ml-service)
+uvicorn app.main:app --host 0.0.0.0 --port 8000 (/ml-service/  + venv\Scripts\activate)
+
+https://github.com/ttemuchin/AudioClassification_WebUI/blob/master/demo.png
