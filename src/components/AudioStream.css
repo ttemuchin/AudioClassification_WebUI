@@ -1,0 +1,128 @@
+.audio-stream {
+  max-width: 600px;
+  /* margin: 0 auto; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.stream-input {
+  width: 100%;
+  min-height: 120px;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.stream-input:hover {
+  border-color: #3b82f6;
+  background: #f0f9ff;
+}
+
+.stream-input.recording {
+  border-color: #ef4444;
+  background: #fef2f2;
+  border-style: solid;
+}
+
+.stream-input.loading {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.stream-content {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+.stream-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.stream-content p {
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+}
+
+.stream-content strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #e5e7eb;
+  border-top: 2px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 12px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-state p {
+  margin: 0 0 12px 0;
+  color: #374151;
+  font-weight: 500;
+}
+
+.recording-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: #ef4444;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+}
+
+.error-message {
+  margin-top: 12px;
+  padding: 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  color: #dc2626;
+  font-size: 0.875rem;
+  text-align: center;
+}

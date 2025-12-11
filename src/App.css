@@ -1,0 +1,38 @@
+.app {
+  display: flex;
+  min-height: 90vh;
+  gap: 24px;
+  padding: 24px;
+  background: #f8f9fa;
+}
+
+.app-left {
+  flex: 0 0 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.app-right {
+  flex: 1;
+  min-width: 0;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+    padding: 16px;
+  }
+  
+  .app-left {
+    flex: none;
+    width: 100%;
+  }
+  
+  .app-right {
+    flex: none;
+    width: 100%;
+  }
+}

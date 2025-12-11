@@ -1,0 +1,165 @@
+.results-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  min-height: 400px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.results-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 350px;
+  color: #6b7280;
+  font-size: 1.1rem;
+  text-align: center;
+  flex: 1;
+}
+/* 
+.results-placeholder > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+} */
+
+.file-details {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.file-detail-item {
+  margin-bottom: 8px;
+  color: #495057;
+  font-size: 0.95rem;
+}
+
+.file-detail-item strong {
+  color: #333;
+}
+
+.audio-preview {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.audio-preview audio {
+  width: 100%;
+  max-width: 400px;
+}
+
+.status {
+  text-align: center;
+  padding: 16px;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  border: 1px solid transparent;
+}
+
+.status.success {
+  background: #f0fdf4;
+  color: #166534;
+  border-color: #bbf7d0;
+}
+
+.status.error {
+  background: #fef2f2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+.status.info {
+  background: #f0f9ff;
+  color: #0369a1;
+  border-color: #bae6fd;
+}
+
+.predictions-results {
+  margin-top: 24px;
+}
+
+.predictions-title {
+  color: #1f2937;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.predictions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.prediction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.prediction-item:hover {
+  background: #f1f5f9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.class-name {
+  font-weight: 600;
+  color: #1e293b;
+  min-width: 150px;
+  font-size: 0.95rem;
+}
+
+.confidence {
+  color: #3b82f6;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: right;
+  font-size: 0.95rem;
+}
+
+.confidence-bar {
+  flex-grow: 1;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  margin: 0 16px;
+  overflow: hidden;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.mode-header {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.mode-header h2 {
+  color: #1f2937;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}

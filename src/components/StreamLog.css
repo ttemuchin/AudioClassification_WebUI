@@ -1,0 +1,188 @@
+.stream-log {
+  margin-top: 24px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+}
+
+.stream-log-title {
+  color: #1f2937;
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.stream-log-table-container {
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.stream-log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.stream-log-table th {
+  background: #f8fafc;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.stream-log-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.stream-log-row:hover {
+  background: #f8fafc;
+}
+
+.stream-log-row:last-child td {
+  border-bottom: none;
+}
+
+/* Колонки */
+.col-number {
+  width: 60px;
+  text-align: center;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.col-time {
+  width: 120px;
+  color: #374151;
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 0.8rem;
+}
+
+.col-prediction {
+  min-width: 120px;
+}
+
+.col-confidence {
+  width: 150px;
+}
+
+/* Бейдж предсказания */
+.prediction-badge {
+  background: #eff6ff;
+  color: #1e40af;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #dbeafe;
+}
+
+/* Отображение уверенности */
+.confidence-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.confidence-bar-small {
+  flex: 1;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.confidence-fill-small {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #059669);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.confidence-percent {
+  color: #059669;
+  font-weight: 600;
+  font-size: 0.8rem;
+  min-width: 35px;
+  text-align: right;
+}
+
+/* Пустое состояние */
+.stream-log-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6b7280;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+.stream-log-empty p {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+}
+
+.stream-log-empty small {
+  font-size: 0.875rem;
+}
+
+/* Статистика */
+.stream-log-stats {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Анимация для новой записи */
+.stream-log-row:first-child {
+  background: #f0fdf4;
+  animation: highlight 2s ease-out;
+}
+
+@keyframes highlight {
+  0% {
+    background: #dcfce7;
+  }
+  100% {
+    background: #f0fdf4;
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .stream-log {
+    padding: 16px;
+  }
+  
+  .stream-log-table {
+    font-size: 0.8rem;
+  }
+  
+  .stream-log-table th,
+  .stream-log-table td {
+    padding: 8px 12px;
+  }
+  
+  .col-time {
+    width: 100px;
+  }
+  
+  .confidence-display {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .confidence-bar-small {
+    width: 100%;
+  }
+}
